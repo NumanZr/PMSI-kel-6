@@ -1,1 +1,1 @@
-<?php include 'views/login_petugas.php' ?>
+<?php header('Location: views/login_petugas.php'); ?>

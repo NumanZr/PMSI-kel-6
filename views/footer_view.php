@@ -12,10 +12,10 @@
 <div id="logout"></div>
 <!-- ./wrapper -->
 <!-- jQuery 3 -->
-<script src="../assets_style/assets/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../../assets_style/assets/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="../assets_style/assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="../assets_style/assets/plugins/summernote/summernote-lite.js"></script>
+<script src="../../assets_style/assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="../../assets_style/assets/plugins/summernote/summernote-lite.js"></script>
 
 <script>
     $('#summernotehal').summernote({
@@ -34,7 +34,7 @@
 	});
 </script>
 <!-- Select2 -->
-<script src="../assets_style/assets/bower_components/select2/dist/js/select2.full.min.js"></script>
+<script src="../../assets_style/assets/bower_components/select2/dist/js/select2.full.min.js"></script>
 <script>
 
 $(function() {
@@ -75,21 +75,21 @@ $("#uintTextBox3").inputFilter(function(value) {
 </script> 
 
 <!-- custom jQuery -->
-<script src="../assets_style/assets/dist/js/custom.js"></script>
+<script src="../../assets_style/assets/dist/js/custom.js"></script>
 
 <!-- Logout Ajax -->
 <!-- AdminLTE App -->
-<script src="../assets_style/assets/dist/js/adminlte.min.js"></script>
+<script src="../../assets_style/assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="../assets_style/assets/dist/js/demo.js"></script>
+<script src="../../assets_style/assets/dist/js/demo.js"></script>
 <!-- PACE -->
-<script src="../assets_style/assets/bower_components/PACE/pace.min.js"></script>
+<script src="../../assets_style/assets/bower_components/PACE/pace.min.js"></script>
 <!-- DataTables -->
-<script src="../assets_style/assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="../assets_style/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../../assets_style/assets/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../../assets_style/assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- bootstrap datepicker -->
-<script src="../assets_style/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<script src="../../assets_style/assets/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- bootstrap time picker -->
-<script src="../assets_style/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+<script src="../../assets_style/assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
 </body>
 </html>

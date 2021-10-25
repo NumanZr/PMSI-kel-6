@@ -1,4 +1,4 @@
-<?php if(! defined('BASEPATH')) exit('No direct script acess allowed');?>
+
 <div class="content-wrapper">
   <section class="content-header">
     <h1>
@@ -27,44 +27,39 @@
 										<td>No Peminjaman</td>
 										<td>:</td>
 										<td>
-											<?= $pinjam->pinjam_id;?>
+											PJ001
 										</td>
 									</tr>
 									<tr>
 										<td>Tgl Peminjaman</td>
 										<td>:</td>
 										<td>
-											<?= $pinjam->tgl_pinjam;?>
+											10-20-2000
 										</td>
 									</tr>
 									<tr>
 										<td>Tgl pengembalian</td>
 										<td>:</td>
 										<td>
-											<?= $pinjam->tgl_balik;?>
+											10-20-2021
 										</td>
 									</tr>
 									<tr>
 										<td>ID Anggota</td>
 										<td>:</td>
 										<td>
-											<?= $pinjam->anggota_id;?>
+											AG002
 										</td>
 									</tr>
 									<tr>
 										<td>Biodata</td>
 										<td>:</td>
 										<td>
-											<?php
-											$user = $this->M_Admin->get_tableid_edit('tbl_login','anggota_id',$pinjam->anggota_id);
-											error_reporting(0);
-											if($user->nama != null)
-											{
-												echo '<table class="table table-striped">
+											<table class="table table-striped">
 															<tr>
 																<td>Nama Anggota</td>
 																<td>:</td>
-																<td>'.$user->nama.'</td>
+																<td>Galih Alif Farizky</td>
 															</tr>
 															<tr>
 																<td>Telepon</td>
@@ -86,18 +81,14 @@
 																<td>:</td>
 																<td>'.$user->level.'</td>
 															</tr>
-														</table>';
-											}else{
-												echo 'Anggota Tidak Ditemukan !';
-											}
-											?>
+												</table>
 										</td>
 									</tr>
 									<tr>
 										<td>Lama Peminjaman</td>
 										<td>:</td>
 										<td>
-											<?= $pinjam->lama_pinjam;?> Hari
+											365 Hari
 										</td>
 									</tr>
 								</table>
@@ -133,53 +124,14 @@
 										<td>Denda</td>
 										<td>:</td>
 										<td>
-											
-											<?php 
-												$pinjam_id = $pinjam->pinjam_id;
-												$denda = $this->db->query("SELECT * FROM tbl_denda WHERE pinjam_id = '$pinjam_id'");
-												$total_denda = $denda->row();
-
-												if($pinjam->status == 'Di Kembalikan')
-												{
-													echo $this->M_Admin->rp($total_denda->denda);
-													
-												}else{
-													$jml = $this->db->query("SELECT * FROM tbl_pinjam WHERE pinjam_id = '$pinjam_id'")->num_rows();			
-													$date1 = date('Ymd');
-													$date2 = preg_replace('/[^0-9]/','',$pinjam->tgl_balik);
-													$diff = $date1 - $date2;
-													/*	$datetime1 = new DateTime($date1);
-														$datetime2 = new DateTime($date2);
-														$difference = $datetime1->diff($datetime2); */
-													// echo $difference->days;
-													if($diff > 0 )
-													{
-														echo $diff.' hari';
-														$dd = $this->M_Admin->get_tableid_edit('tbl_biaya_denda','stat','Aktif'); 
-														echo '<p style="color:red;font-size:18px;">'.$this->M_Admin->rp($jml*($dd->harga_denda*$diff)).' 
-														</p><small style="color:#333;">* Untuk '.$jml.' Buku</small>';
-													}else{
-														echo '<p style="color:green;text-align:center;">
-														Tidak Ada Denda</p>';
-													}
-												}
-											?>
+											1 Juta
 										</td>
 									</tr>
 									<tr>
 										<td>Kode Buku</td>
 										<td>:</td>
 										<td>
-										<?php
-											$pin = $this->M_Admin->get_tableid('tbl_pinjam','pinjam_id',$pinjam->pinjam_id);
-											$no =1;
-											foreach($pin as $isi)
-											{
-												$buku = $this->M_Admin->get_tableid_edit('tbl_buku','buku_id',$isi['buku_id']);
-												echo $no.'. '.$buku->buku_id.'<br/>';
-											$no++;}
-
-										?>
+										
 										</td>
 									</tr>
 									<tr>
